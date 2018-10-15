@@ -6,6 +6,16 @@
  *
  */
 
+ // Your code :
+
+ function total(argument) {
+	let result = 0;
+   for(let i = 0; i < argument.length; i++){
+     result = result + argument[i]
+   }
+   return result
+ }
+
 
 //* Begin of tests
 const assert = require('assert')
