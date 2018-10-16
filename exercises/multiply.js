@@ -9,22 +9,34 @@
  */
 
 // Your code :
-function multiply( number1, number2){
+function multiply(number1, number2){
 	let result = 0;
-	if (number2 < 0){
-		number2 = -number2
+	if (number1 < 0 && number2 < 0){
+		number1 =  Math.abs(number1)
+		number2 = Math.abs(number2)
 		for(let i=0; i < number2; i++){
-		result = result + number1
+			result = result + number1
+		}
+		return result
+	}
+	if (number1 < 0 || number2 < 0){
+		if (number1 < 0) {
+			number1 =  Math.abs(number1)
+		}else{
+			number2 = Math.abs(number2)
+		}
+		for(let i=0; i < number2; i++){
+			result = result + number1
 		}
 		return -result
 	}else{
 
-	for(let i=0; i < number2; i++){
-		result = result + number1
-	}
+		for(let i=0; i < number2; i++){
+			result = result + number1
+		}
 
-	return result
-}
+		return result
+	}
 }
 
 //* Begin of tests
