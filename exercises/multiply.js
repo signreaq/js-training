@@ -9,36 +9,32 @@
  */
 
 // Your code :
-function multiply(number1, number2){
-	let result = 0;
-	if (number1 < 0 && number2 < 0){
-		number1 =  Math.abs(number1)
-		number2 = Math.abs(number2)
-		for(let i=0; i < number2; i++){
-			result = result + number1
+function multiply (x, y){
+	let somme = 0;
+	if(x > 0 && y > 0){
+		for(let i = 0; i < x; i++){
+			somme = somme + y;
 		}
-		return result
 	}
-	if (number1 < 0 || number2 < 0){
-		if (number1 < 0) {
-			number1 =  Math.abs(number1)
-		}else{
-			number2 = Math.abs(number2)
+	else if(x < 0 && y > 0){
+		for(let i = 0; i < y; i++){
+			somme = somme + x;
 		}
-		for(let i=0; i < number2; i++){
-			result = result + number1
-		}
-		return -result
-	}else{
-
-		for(let i=0; i < number2; i++){
-			result = result + number1
-		}
-
-		return result
 	}
-}
-
+	else if(x < 0 && y < 0){
+		for(let i = 0; i > x; i--){
+			somme = somme - y;
+		}
+	}
+	else if(x > 0 && y < 0){
+		for(let i = 0; i < x; i++){
+			somme = somme + y;
+		}
+	}
+	else{
+		return(0);
+	}
+	return(somme);}
 //* Begin of tests
 const assert = require('assert')
 
