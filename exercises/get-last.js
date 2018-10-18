@@ -8,6 +8,16 @@
  */
 
 // Your code :
+function getLast(param) {
+    let result = "";
+    if (typeof param !== 'undefined') {
+        for (let i = 0; i < param.length; i++) {
+            result = param[i]
+        }
+        return result
+    }
+}
+return undefined
 
 //* Begin of tests
 const assert = require('assert')

@@ -9,6 +9,14 @@
 
 // Your code :
 
+function getLength(param){
+	let result = 0
+		for(let i = 0; i < param.length; i++){
+			result = result +1
+		}
+		return result
+}
+
 //* Begin of tests
 const assert = require('assert')
 
